@@ -347,5 +347,5 @@
 	+ or `sudo systemctl start [SERVICENAME]` to start it right now
 	
 8. To customise user startup and settings:
-	+ check files like '~/.profile' or '~/.bash_profile'
+	+ check files like ~/.profile or ~/.bash_profile
 	+ these will run on login
