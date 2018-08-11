@@ -27,12 +27,7 @@
 + All commands are surrounded by ` ` so just follow those if you want
 + Tutorial taken from Luke Smith's "Full Arch Linux Install (SAVAGE Edition!)" video, timestamps linked at each section
 
-``` 
-88""Yb    db    88""Yb 888888       .d 
-88__dP   dPYb   88__dP   88       .d88 
-88"""   dP__Yb  88"Yb    88         88 
-88     dP""""Yb 88  Yb   88         88
-```
+# Part 1
 
 ### Mounting ISO [2:55]
 1. Go to Arch Linux website, download Arch ISO
@@ -291,13 +286,7 @@
 	
 42. The computer should boot into a terminal as a fresh Arch install. Now go do whatever.
 
-
-``` 
-#  88""Yb    db    88""Yb 888888     oP"Yb. 
-#  88__dP   dPYb   88__dP   88       "' dP' 
-#  88"""   dP__Yb  88"Yb    88         dP'  
-#  88     dP""""Yb 88  Yb   88       .d8888
-```
+# Part 2
 
 ### Users and Groups [2:00]
 1. Add a user ('sam') and give user a password:
