@@ -41,7 +41,7 @@ bindsym $mod+Return 		exec i3-sensible-terminal
 bindsym $mod+Shift+q 		kill
 
 # Launch rofi.
-bindsym $mod+d			exec rofi -show run -font "Dina 8" -show-icons -drun-icon-theme Papirus #-theme dracula
+bindsym $mod+d			exec rofi -show run -font "xos4 Terminus 9" -show-icons -drun-icon-theme Papirus #-theme dracula
 
 # Change focus.
 bindsym $mod+j 			focus left
@@ -177,20 +177,29 @@ assign [class="Steam"] $ws8
 ###---A E S T H E T I C S---###
 
 # Variables for colours.
-set $bg-color		 #282a36
+#set $bg-color		 	#282a36
+#set $inactive-bg-color   	#242830
+#set $text-color		#f8f8f2
+#set $inactive-text-color 	#44475a
+#set $urgent-bg-color	 	#ff5555
+#set $indicator           	#282a36
+#set $border-color	 	#44475a
+#set $inactive-bar-color  	#282a36
+
+set $bg-color		 #0c0707
 set $inactive-bg-color   #242830
-set $text-color		 #f8f8f2
-set $inactive-text-color #44475a
+set $text-color		 #c1afc0
+set $inactive-text-color #262326
 set $urgent-bg-color	 #ff5555
-set $indicator           #282a36
-set $border-color	 #44475a
-set $inactive-bar-color  #282a36
+set $indicator           #0c0707
+set $border-color	 #241f1f
+set $inactive-bar-color  #0c0707
 
 # Colour list:
-# $bg-color		Mid-Grey
-# $inactive-bg-color	Dark-Grey, Black
-# $text-color		White
-# $inactive-text-color	Light-Grey
+# $bg-color		Mid-Grey		
+# $inactive-bg-color	Dark-Grey/Black	
+# $text-color		White		
+# $inactive-text-color	Light-Grey	
 # $urgent-bg-color	Red
 # $indicator		Mid-Grey
 # $border-color		Lighter-Grey
@@ -250,10 +259,10 @@ bindsym $mod+F7 		exec light -Ap 10
 # Launch applications on login.
 exec terminator
 exec firefox
-exec spotify
+#exec spotify
 
 # Set desktop wallpaper.
-exec_always 			feh --bg-scale /home/sam/pic/blackspace.jpg
+exec_always 			feh --bg-scale /home/sam/pic/drivecar.jpg
 
 # Launch compton.
 exec compton -f
