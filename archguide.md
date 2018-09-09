@@ -92,8 +92,8 @@
 ### Partitioning Drives [16:04]
 11. The hard part. To begin, enter:
 	
-	`fdisk /dev/sdb`
-	+ assuming sdb is the drive you're installing on, otherwise just replace it with whatever drive
+	`fdisk /dev/sda`
+	+ assuming sda is the drive you're installing on, otherwise just replace it with whatever drive
 	
 12. To print current drive details:
 	`p`
@@ -146,37 +146,37 @@
 19. Re-enter 
 
 	`lsblk`
-	+ we're going to want to create filesystems for the boot, root and home partitions (sdb1, sdb3 & sdb4), not swap, as these partitions will contain files
+	+ we're going to want to create filesystems for the boot, root and home partitions (sda1, sdab3 & sda4), not swap, as these partitions will contain files
 
 20. To make the filesystem for the boot partitions, enter:
 	
-	`mkfs.ext4 /dev/sdb1`
-	+ or replace sdb1 with whatever the boot partition is
+	`mkfs.ext4 /dev/sda1`
+	+ or replace sda1 with whatever the boot partition is
 	
 21. For the root partition, enter:
 	
-	`mkfs.ext4 /dev/sdb3`
+	`mkfs.ext4 /dev/sda3`
 	+ this will take a little longer because its bigger
 	
 22. For the home partition, enter:
 	
-	`mkfs.ext4 /dev/sdb4`
+	`mkfs.ext4 /dev/sda4`
 	+ this will take the longest amount of time, but shouldnt be too long
 	
 23. To set up the swap partition, enter:
 	
-	`mkswap /dev/sdb2`
+	`mkswap /dev/sda2`
 	and then enter:
 	
-	`swapon /dev/sdb2`
+	`swapon /dev/sda2`
 	
 
 ### Mounting Partitions [27:36]
 24. First we mount the root partition:
 	
-	`mount /dev/sdb3 /mnt`
+	`mount /dev/sda3 /mnt`
 	+ traditionally root is mounted to '/mnt'
-	+ obviously replace sdb3 with your root partition
+	+ obviously replace sda3 with your root partition
 	+ entering `ls /mnt` should return a 'lost+found' folder
 	
 25. Now to make directories to mount the other partitions:
@@ -187,11 +187,11 @@
 	
 26. To mount the boot partition to the new 'boot' folder, enter:
 	
-	`mount /dev/sdb1 /mnt/boot`
+	`mount /dev/sda1 /mnt/boot`
 	
 27. To mount the home partition to the new 'home' folder, enter:
 	
-	`mount /dev/sdb4 /mnt/home`
+	`mount /dev/sda4 /mnt/home`
 	+ type `lsblk` for the final time and all four partitions should now have appropriate mountpoints
 	
 	
@@ -214,7 +214,7 @@
 	+ keep in mind, at this point we're still working off the usb
 
 30. Delete any entries that might not be neccessary
-	+ e.g. if you're using sdb and theres an sda1 entry just remove it
+	+ e.g. if you're using sda and theres an sda1 entry just remove it
 	
 	
 ### Finalise Installation [37:23]
@@ -232,9 +232,9 @@
 33. Install a boot loader, activate GRUB and generate a GRUB config:
 	
 	`pacman -S grub`
-	`grub-install --target=i386-pc /dev/sdb`
-	+ replace 'sdb' with whatever your system is
-	+ dont write sdb1 or sdb2, just sdb
+	`grub-install --target=i386-pc /dev/sda`
+	+ replace 'sda' with whatever your system is
+	+ dont write sda1 or sda2, just sda
 	
 	`grub-mkconfig -o /boot/grub/grub.cfg`
 	
