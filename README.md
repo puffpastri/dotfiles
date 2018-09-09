@@ -5,7 +5,7 @@
 ## Overview
 yes here they are it is finally time for me to reinstall arch every month and put the files here so i dont lose them
 
-I'm using [i3](https://github.com/i3/i3) (although I might start using i3-gaps soon) as a WM and [KDE Plasma](https://www.kde.org/plasma-desktop) as a DE if I'm too stupid to figure out how to do something without a GUI. 
+I'm using [i3-gaps](https://github.com/Airblader/i3) as a WM and [KDE Plasma](https://www.kde.org/plasma-desktop) as a DE if I'm too stupid to figure out how to do something without a GUI. 
 
 Other things I also use are:
 + Bar: [i3-status](https://github.com/i3/i3status) or [polybar](https://github.com/jaagr/polybar)
